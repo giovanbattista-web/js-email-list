@@ -8,8 +8,7 @@ const settimaEmail = document.getElementById('mail-7');
 const ottavaEmail = document.getElementById('mail-8');
 const nonaEmail = document.getElementById('mail-9');
 const decimaEmail = document.getElementById('mail-10');
-
-
+const button = document.getElementById('altre-email');
 
 const endpoint = `https://flynn.boolean.careers/exercises/api/random/mail?`;
 let email1;
@@ -23,7 +22,7 @@ let email8;
 let email9;
 let email10;
 
-
+const fetch = () => {
   axios.get(endpoint).then((elemento) => {
     const email1 = elemento.data.response;
     const email2 = elemento.data.response;
@@ -48,8 +47,9 @@ let email10;
     nonaEmail.innerHTML = email9;
     decimaEmail.innerHTML = email10;
   });
+}
 
-
-
+button.addEventListener('click', fetch);
+fetch();
 
 
