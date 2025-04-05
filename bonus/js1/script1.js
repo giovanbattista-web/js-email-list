@@ -6,6 +6,8 @@ const button = document.getElementById('get-emails')
 const endpoint = 'https://flynn.boolean.careers/exercises/api/random/mail';
 
 const getEmails = (domList) => {
+  // INSERIRE LA LINEA DI CODICE SUCCESSIVA PER NON FAR AGGIUNGERE ALTRE 10 EMAIL IN MODO CHE VENGONO INSERITE 
+  // 10 EMAIL E NON 20 
   domList.innerHTML = '';
 
   for (let i = 1; i <= 10; i++){
